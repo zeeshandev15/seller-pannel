@@ -6,7 +6,7 @@
 
 > Free React Admin Dashboard made with [MUI's](https://mui.com) components, [React](https://reactjs.org) and of course [Next.js](https://github.com/vercel/next.js) to boost your app development process!
 
-## Pages 
+## Pages
 
 - [Dashboard](https://material-kit-react.devias.io)
 - [Customers](https://material-kit-react.devias.io/dashboard/customers)
@@ -29,11 +29,11 @@ to save more time and design efforts :)
 | Free Version (this one)  | [Devias Kit Pro](https://mui.com/store/items/devias-kit-pro/)                |
 | ------------------------ | :--------------------------------------------------------------------------- |
 | **8** Pages              | **80+** Pages                                                                |
-| ✔ Custom Authentication  | ✔ Authentication with **Amplify**, **Auth0**, **Firebase** and **Supabase**  |
-| -                        | ✔ Vite Version                                                               |
-| -                        | ✔ Dark Mode Support                                                          |
-| -                        | ✔ Complete Users Flows                                                       |
-| -                        | ✔ Premium Technical Support                                                  |
+| ✔ Custom Authentication | ✔ Authentication with **Amplify**, **Auth0**, **Firebase** and **Supabase** |
+| -                        | ✔ Vite Version                                                              |
+| -                        | ✔ Dark Mode Support                                                         |
+| -                        | ✔ Complete Users Flows                                                      |
+| -                        | ✔ Premium Technical Support                                                 |
 
 ## Quick start
 
@@ -87,4 +87,4 @@ Within the download you'll find the following directories and files:
 
 ## Contact Us
 
-- Email Us: support@deviasio.zendesk.com
+- Email Us: fullstackdeveloper486@gmail.com
