@@ -12,9 +12,7 @@ import { ArrowSquareUpRight as ArrowSquareUpRightIcon } from '@phosphor-icons/re
 import { CaretUpDown as CaretUpDownIcon } from '@phosphor-icons/react/dist/ssr/CaretUpDown';
 
 import type { NavItemConfig } from '@/types/nav';
-import { paths } from '@/paths';
 import { isNavItemActive } from '@/lib/is-nav-item-active';
-import { Logo } from '@/components/core/logo';
 
 import { navItems } from './config';
 import { navIcons } from './nav-icons';
@@ -51,9 +49,33 @@ export function SideNav(): React.JSX.Element {
       }}
     >
       <Stack spacing={2} sx={{ p: 3 }}>
-        <Box component={RouterLink} href={paths.home} sx={{ display: 'inline-flex' }}>
-          <Logo color="light" height={42} width={132} />
-        </Box>
+        <Stack spacing={2} sx={{ p: 3 }} direction="row" alignItems="center">
+          <Box
+            component="img"
+            src="/assets/logo.png"
+            alt="SellEase Logo"
+            sx={{
+              width: 30,
+              height: 30,
+              objectFit: 'contain',
+            }}
+          />
+          <Typography
+            variant="h6"
+            gutterBottom
+            sx={{
+              background: 'linear-gradient(45deg, #6EC6FF, #2196F3)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              fontWeight: 'bold',
+              letterSpacing: 2,
+              textTransform: 'uppercase',
+              textShadow: '2px 2px 6px rgba(33, 150, 243, 0.5)',
+            }}
+          >
+            SELLEASE
+          </Typography>
+        </Stack>
         <Box
           sx={{
             alignItems: 'center',

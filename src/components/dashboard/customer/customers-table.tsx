@@ -6,10 +6,8 @@ import dayjs from 'dayjs';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
-import Link from 'next/link';
 import { Button, Stack, Typography } from '@mui/material';
 import { Download as DownloadIcon } from '@phosphor-icons/react/dist/ssr/Download';
-import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
 import { Upload as UploadIcon } from '@phosphor-icons/react/dist/ssr/Upload';
 import { AllCommunityModule, ColDef, ModuleRegistry } from 'ag-grid-community';
 import { AgGridReact } from 'ag-grid-react';
@@ -17,7 +15,6 @@ import { AgGridReact } from 'ag-grid-react';
 import AddCustomerForm from './add-customers';
 
 ModuleRegistry.registerModules([AllCommunityModule]);
-
 interface Customer {
   id: string;
   name: string;

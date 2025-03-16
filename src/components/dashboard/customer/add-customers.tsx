@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { PhotoCamera } from '@mui/icons-material';
@@ -12,27 +14,24 @@ import {
   IconButton,
   TextField,
 } from '@mui/material';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
-// ✅ Zod Schema for Validation
 const customerSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email format'),
   phone: z.string().min(10, 'Phone number must be at least 10 digits'),
   location: z.string().min(3, 'Location must be at least 3 characters'),
   joined: z.string().refine((date) => !isNaN(Date.parse(date)), 'Invalid date'),
-  image: z.instanceof(File).optional(), // File upload validation
+  image: z.instanceof(File).optional(),
 });
 
-// ✅ Type Inference from Zod
 type Customer = z.infer<typeof customerSchema>;
 
 export default function AddCustomerForm() {
   const [open, setOpen] = useState<boolean>(false);
   const [preview, setPreview] = useState<string | null>(null);
 
-  // ✅ React Hook Form with Zod Validation
   const {
     register,
     handleSubmit,
@@ -46,14 +45,12 @@ export default function AddCustomerForm() {
       email: '',
       phone: '',
       location: '',
-      joined: new Date().toISOString().split('T')[0], // Default today's date
+      joined: new Date().toISOString().split('T')[0],
     },
   });
 
-  // ✅ Watch for image updates
   const imageFile = watch('image');
 
-  // ✅ Handle Image Change
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -62,7 +59,6 @@ export default function AddCustomerForm() {
     }
   };
 
-  // ✅ Form Submission
   const onSubmit = (data: Customer) => {
     console.log('New Customer:', data);
     setOpen(false);
@@ -70,17 +66,14 @@ export default function AddCustomerForm() {
 
   return (
     <>
-      {/* Open Modal */}
       <Button variant="contained" onClick={() => setOpen(true)} sx={{ backgroundColor: '#6366F1', color: '#fff' }}>
         + Add
       </Button>
 
-      {/* Modal Form */}
       <Dialog open={open} onClose={() => setOpen(false)} fullWidth maxWidth="sm">
         <DialogTitle>Add New Customer</DialogTitle>
         <DialogContent>
           <Box component="form" onSubmit={handleSubmit(onSubmit)} display="flex" flexDirection="column" gap={2} mt={1}>
-            {/* Profile Picture Upload */}
             <Box display="flex" alignItems="center" gap={2}>
               <Avatar src={preview || '/default-avatar.png'} sx={{ width: 80, height: 80 }} />
               <input
