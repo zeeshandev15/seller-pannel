@@ -15,9 +15,6 @@
 - [Sign In](https://material-kit-react.devias.io/auth/sign-in)
 - [Sign Up](https://material-kit-react.devias.io/auth/sign-up)
 - [Reset Password](https://material-kit-react.devias.io/auth/reset-password)
-
-                      |
-
 ## Quick start
 
 - Clone the repo: `git clone https://github.com/zeeshandev15/supplier-Pannel.git`
