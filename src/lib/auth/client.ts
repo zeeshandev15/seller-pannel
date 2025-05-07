@@ -13,7 +13,7 @@ const user = {
   avatar: '/assets/avatar.png',
   firstName: 'Sofia',
   lastName: 'Rivers',
-  email: 'sofia@devias.io',
+  email: 'zeeshan@gmail.io',
 } satisfies User;
 
 export interface SignUpParams {
@@ -57,7 +57,7 @@ class AuthClient {
     // Make API request
 
     // We do not handle the API, so we'll check if the credentials match with the hardcoded ones.
-    if (email !== 'sofia@devias.io' || password !== 'Secret1') {
+    if (email !== 'zeeshan@gmail.io' || password !== 'Secret1') {
       return { error: 'Invalid credentials' };
     }
 

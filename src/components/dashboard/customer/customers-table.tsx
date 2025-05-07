@@ -125,11 +125,13 @@ const CustomerTable = () => {
       headerName: 'ID',
       field: 'id',
       sortable: true,
+      headerClass: 'smoke-white-header',
     },
     {
       headerName: 'Name',
       field: 'name',
       sortable: true,
+      headerClass: 'smoke-white-header',
 
       cellRenderer: (params: any) => {
         return (
@@ -144,11 +146,13 @@ const CustomerTable = () => {
       headerName: 'Email',
       field: 'email',
       sortable: true,
+      headerClass: 'smoke-white-header',
     },
     {
       headerName: 'Phone',
       field: 'phone',
       sortable: true,
+      headerClass: 'smoke-white-header',
 
       filter: 'agNumberColumnFilter',
     },
@@ -156,6 +160,8 @@ const CustomerTable = () => {
       headerName: 'Location',
       field: 'address',
       sortable: true,
+      headerClass: 'smoke-white-header',
+
       valueGetter: (params) =>
         `${params.data?.address.city}, ${params.data?.address.state}, ${params.data?.address.country}`,
     },
@@ -163,6 +169,8 @@ const CustomerTable = () => {
       headerName: 'Joined',
       field: 'createdAt',
       sortable: true,
+      headerClass: 'smoke-white-header',
+
       valueFormatter: (params) => dayjs(params.value).format('MMM D, YYYY'),
     },
   ];
