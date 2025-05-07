@@ -10,7 +10,7 @@ function generateToken(): string {
 
 const user = {
   id: 'USR-000',
-  avatar: '/assets/avatar.png',
+  avatar: '/assets/avatar.jpeg',
   firstName: 'Sofia',
   lastName: 'Rivers',
   email: 'zeeshan@gmail.io',
