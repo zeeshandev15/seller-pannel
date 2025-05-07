@@ -55,7 +55,6 @@ Within the download you'll find the following directories and files:
 		├── auth
 		└── dashboard
 ```
-
 ## Resources
 
 - More freebies like this one: https://devias.io
